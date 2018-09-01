@@ -1,0 +1,16 @@
+extends: google
+plugins:
+  - googleappsscript
+
+overrides:
+  - files: '*.gs'
+    env:
+      googleappsscript/googleappsscript: true
+    rules:
+      no-var: off
+      no-unused-vars:
+        - error
+        - vars: local
+          args: none
+          caughtErrors: all
+      prefer-spread: off

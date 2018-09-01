@@ -1,0 +1,19 @@
+{
+  "name": "gas-deploy",
+  "version": "0.1.0",
+  "description": "Google Apps Script を複数のドキュメントに同時に仕込むためのスクリプト",
+  "main": "Code.gs",
+  "repository": "https://github.com/kuinaein/gas-deploy",
+  "author": "Kuina <kuinanein@gmail.com>",
+  "license": "Unlicense",
+  "scripts": {
+    "lint": "node node_modules/.bin/eslint . --ext .gs",
+    "lint:fix": "node node_modules/.bin/eslint --fix . --ext .gs"
+  },
+  "devDependencies": {
+    "@types/google-apps-script": "^0.0.27",
+    "eslint": "^5.4.0",
+    "eslint-config-google": "^0.9.1",
+    "eslint-plugin-googleappsscript": "^1.0.1"
+  }
+}
