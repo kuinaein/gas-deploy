@@ -19,7 +19,8 @@
 1. `Code.gs`、`appsscript.json`をこのフォルダ内にあるものと置き換える
    - スクリプトエディタでは「表示＞マニフェストファイルを表示」が有効になっていないと表示されないので注意
 1. ファイル名の頭に`dist/`を付けて仕込みたいスクリプトを書く
-1. `dist/appsscript.json`は HTML ファイル`dist/appsscript.json.html`として作成する必要がある。Apps Script の仕様
+1. `dist/appsscript.json.html`は必ず入れる必要がある。依存ライブラリ等ない場合は[dist/appsscript.json.html](https://github.com/kuinaein/gas-deploy/blob/master/dist/appsscript.json.html)の通りで良いはず
+   - Apps Script の仕様で拡張子`*.json`は基本的に作成できないので HTML として置いておく
 1. `Code.gs`に所要の設定を書き込む
 1. メニューの「リソース＞ Google の拡張サービス」から Google API コンソールを開く
 1. 「Google Drive API」と「Apps Script API」を有効にする
