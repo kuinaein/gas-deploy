@@ -10,7 +10,12 @@ overrides:
       no-var: off
       no-unused-vars:
         - error
-        - vars: local
+        - vars: all
           args: none
           caughtErrors: all
       prefer-spread: off
+
+  - files: '*.js'
+    env:
+      node: true
+      es6: true

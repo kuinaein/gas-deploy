@@ -7,11 +7,18 @@
   "author": "Kuina <kuinanein@gmail.com>",
   "license": "Unlicense",
   "scripts": {
-    "lint": "node node_modules/.bin/eslint . --ext .gs",
-    "lint:fix": "node node_modules/.bin/eslint --fix . --ext .gs"
+    "deploy:push": "node ./node_modules/.bin/env-cmd .env node deployer.js push",
+    "logout": "node ./node_modules/.bin/clasp logout",
+    "lint": "node ./node_modules/.bin/eslint . --ext .gs,.js",
+    "lint:fix": "node ./node_modules/.bin/eslint --fix . --ext .gs,.js"
+  },
+  "dependencies": {
+    "@google/clasp": "^1.5.3",
+    "env-cmd": "^8.0.2"
   },
   "devDependencies": {
     "@types/google-apps-script": "^0.0.27",
+    "@types/node": "^10.9.4",
     "eslint": "^5.4.0",
     "eslint-config-google": "^0.9.1",
     "eslint-plugin-googleappsscript": "^1.0.1"
